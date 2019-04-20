@@ -31,7 +31,7 @@ class cQueue(object):
 
         if(self.isEmpty()): self.head = 0
 
-        self.tail = (self.tail + 1) % 5
+        self.tail = (self.tail + 1) % self.size
 
         if (len(self.list) > self.tail ):
             print('already space')
