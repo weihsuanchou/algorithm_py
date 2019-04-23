@@ -1,2 +1,3 @@
-mSquares(13))
-    # print("min count: ", s.numSquares(7))
+    if not newPasscode in visited:
+                            visited.add(newPasscode)
+                            myQueue.append((newPasscode, step+1))
