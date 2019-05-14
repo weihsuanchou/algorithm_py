@@ -1,3 +1,6 @@
-    if not newPasscode in visited:
-                            visited.add(newPasscode)
-                            myQueue.append((newPasscode, step+1))
+input = [[1,1,1,1,0] ,
+             [1,1,0,1,0] ,
+             [1,1,0,0,0] ,
+             [0,0,0,0,0]]
+ 
+    print("island count: ", countIsland(input))
