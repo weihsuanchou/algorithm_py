@@ -42,23 +42,47 @@ class solution:
             dict = sum
 
         return dict[S]
+
+
+    def findTargetSumWays2(self, nums: List[int], S: int) -> int: 
+        # integers are immutable
+        #Everything in Python is an object.
+        # Objects of built-in types like (int, float, bool, str, tuple, unicode) are immutable
+        count = [0]
+
+        def helper(nums, target, index, count):
+            #recursion until the index execess len(nums)
+            if index == len(nums):
+                
+                if target == 0:
+                    print(target, index, count)
+                    count[0] += 1 
+                return 0
+
+            helper(nums, target-nums[index] , index+1, count) 
+            helper(nums, target+nums[index] , index+1, count)
+              
+        helper(nums, S, 0, count)
+        print("count ", count[0])
+        return count[0]
+        
     
 def main():
     print( "hello Doctor! Target Sum")
     dict = defaultdict(int)
     dict[0] = 1
     dict[2] = 3
-    for j in dict: 
-        print('key,val: ', j,  dict[j])  
+    # for j in dict: 
+    #     print('key,val: ', j,  dict[j])  
     
-    newDic = defaultdict(int)
-    newDic[5] = 1
-    dict =newDic
+    # newDic = defaultdict(int)
+    # newDic[5] = 1
+    # dict =newDic
 
-    print(dict)
-    for j in dict: 
-        print('val', dict[j]) 
-    print(solution().findTargetSumWays([1, 1, 1, 1, 1], 3))
+    # print(dict)
+    # for j in dict: 
+    #     print('val', dict[j]) 
+    print(solution().findTargetSumWays2([1, 1, 1, 1, 1], 3))
 
 
 if __name__ == "__main__":
