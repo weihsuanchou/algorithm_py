@@ -56,6 +56,51 @@ class cQueue(object):
         return True
     
 
+class MyQueue:
+    queue = []
+    def __init__(self):
+        """
+        Initialize your data structure here.
+        """ 
+        self.queue = []
+
+    def push(self, x: int) -> None:
+        """
+        Push element x to the back of queue.
+        """
+        self.queue.append(x)
+        print(self.queue)
+
+    def pop(self) -> int:
+        """
+        Removes the element from in front of queue and returns that element.
+        """
+        cur = None
+        if(not self.empty()):
+            cur = self.queue[0] 
+            self.queue = self.queue[1:] 
+        return cur
+
+    def peek(self) -> int:
+        """
+        Get the front element.
+        """ 
+        if not self.empty(): 
+            return self.queue[0] 
+        return None
+        
+
+    def empty(self) -> bool:
+        """
+        Returns whether the queue is empty.
+        """ 
+        if(self.queue is not None and len(self.queue) > 0):
+            print("len > 0" )
+            return False
+        else:
+            print("len = 0" )
+            return True
+
 def main():
     print( "hello Doctor!")
     #myqueue = cQueue(5)
@@ -63,23 +108,27 @@ def main():
     q = deque(list,5)
 
     q.append(1)
-    print(q[0])
+    #print(q[0])
     q.append(2)
-    print(q[0])
+    #print(q[0])
     q.popleft()
     q.popleft()
     q.popleft()
-    print('size: ', len(q))
-    q.popleft() 
+    # print('size: ', len(q))
+    # q.popleft() 
     
-    print('len: ', q.maxlen )
-    if q:
-        print('has value ', q[0])
-    else:
-        print('Queue is empty')
+    # print('len: ', q.maxlen )
+    # if q:
+    #     print('has value ', q[0])
+    # else:
+    #     print('Queue is empty')
 
-     
-
-
+    # q = MyQueue()
+    # print(q.empty()) 
+    # q.push(3)
+    # q.pop()
+    # print(q.peek())  
+    
+    print( "1" in "333")
 if __name__ == "__main__":
     main()

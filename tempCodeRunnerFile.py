@@ -1,14 +1,10 @@
-import re
+for j in dict: 
+    #     print('key,val: ', j,  dict[j])  
+    
+    # newDic = defaultdict(int)
+    # newDic[5] = 1
+    # dict =newDic
 
-def validPhoneNumber(str): 
-    #replace (,  ), +1, -, #all behine
-    #
-    Pattern = re.compile("^[0-9]") 
-    return Pattern.match(str) 
-
-def main():
-
-    print(validPhoneNumber("469268125A2"))
-
-if __name__ == "__main__":
-    main()
+    # print(dict)
+    # for j in dict: 
+    #     print('val', dict[j]) 
