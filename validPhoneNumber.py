@@ -1,7 +1,8 @@
 import re
 from validate_email import validate_email
 import phonenumbers
-
+#install phonenumbers
+#install validate_email
 def validPhoneNumber(str): 
     #replace (,  ), +1, -, #all behine
     str_replaced = (str.replace('(','', -1)
