@@ -1,5 +1,5 @@
 class Solution:
-    def dailyTemperatures(self, list: List[int]) -> List[int]: 
+    def dailyTemperatures(self, list): 
       # try 1
       result = [0] * len(list)
       stack = []
