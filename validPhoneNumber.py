@@ -14,21 +14,25 @@ def validPhoneNumber(str):
 
 def main():
 
-    print(validPhoneNumber("4692681252"))
-    print(validPhoneNumber("+14692681252"))
-    print(validPhoneNumber("4692681+252"))
-    print(validPhoneNumber("469-2681252"))
-    print(validPhoneNumber("4692^681252"))
-    print(validPhoneNumber("4692681252#12")) 
-    print(validate_email('123@7-11.com'))
-    print(phonenumbers.parse("4692681252", "US"))
-    print(phonenumbers.parse("+14692681252", "US"))
-    print(phonenumbers.parse("14692681252", "US"))
-    print(phonenumbers.parse("(469)2681252", "US"))
-    print(phonenumbers.parse("469-268-1252", "US"))
-    print(phonenumbers.parse("4692681+252", "US"))
-    print(phonenumbers.parse("4692^681252", "US"))
-    print(phonenumbers.parse("4692681252#12", "US"))
-    
+    # print(validPhoneNumber("4692681252"))
+    # print(validPhoneNumber("+14692681252"))
+    # print(validPhoneNumber("4692681+252"))
+    # print(validPhoneNumber("469-2681252"))
+    # print(validPhoneNumber("4692^681252"))
+    # print(validPhoneNumber("4692681252#12")) 
+    # print(validate_email('123@7-11.com'))
+    # print(phonenumbers.parse("4692681252", "US"))
+    # print(phonenumbers.parse("+14692681252", "US"))
+    # print(phonenumbers.parse("14692681252", "US"))
+    # print(phonenumbers.parse("(469)2681252", "US"))
+    # print(phonenumbers.parse("469-268-1252", "US"))
+    # print(phonenumbers.parse("4692681+252", "US"))
+    # print(phonenumbers.parse("4692^681252", "US"))
+    # print(phonenumbers.parse("4692681252#12", "US"))
+    for i in range(1, 3):
+        print(i, end=" ")
+    print("change line")
+    for i in range(3,3):
+        print(i, end=" ")
 if __name__ == "__main__":
     main()
